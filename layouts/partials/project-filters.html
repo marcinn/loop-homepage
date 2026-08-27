@@ -1,0 +1,11 @@
+{{ $active := default "" .active }}
+{{ with site.GetPage "taxonomy" "technologies" }}
+  {{ if gt (len .Pages) 0 }}
+    <nav class="project-filters tag-row" aria-label="Filtr projektów">
+      <a class="tag-filter{{ if not $active }} is-active{{ end }}" href="{{ "projects/" | relURL }}">Wszystkie</a>
+      {{ range .Pages.ByTitle }}
+        <a class="tag-filter{{ if eq .RelPermalink $active }} is-active{{ end }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+      {{ end }}
+    </nav>
+  {{ end }}
+{{ end }}

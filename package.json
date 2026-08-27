@@ -1,0 +1,13 @@
+{
+  "name": "loop-hugo",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Hugo landing page for LOOP — Laboratorium Otwartego Oprogramowania i Prototypów",
+  "scripts": {
+    "dev": "hugo server -D --baseURL http://127.0.0.1:1313/",
+    "build": "hugo --minify"
+  },
+  "devDependencies": {
+    "bulma": "^1.0.4"
+  }
+}

@@ -1,0 +1,4 @@
+{{ define "main" }}
+<section class="page-hero"><div class="container narrow"><p class="eyebrow">LOOP</p><h1>{{ .Title }}</h1>{{ with .Params.summary }}<p>{{ . }}</p>{{ end }}</div></section>
+<section class="section"><div class="container narrow prose">{{ .Content }}</div></section>
+{{ end }}

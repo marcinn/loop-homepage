@@ -1,0 +1,10 @@
+{{ define "main" }}
+<section class="page-hero"><div class="container"><p class="eyebrow">Otwarte portfolio</p><h1>{{ .Title }}</h1><p>{{ .Params.description }}</p></div></section>
+<section class="section">
+  <div class="container">
+    {{ $pages := .Pages.ByWeight }}
+    {{ partial "project-filters.html" (dict "active" "") }}
+    <div class="project-grid project-grid--large">{{ range $pages }}{{ partial "project-card.html" . }}{{ end }}</div>
+  </div>
+</section>
+{{ end }}

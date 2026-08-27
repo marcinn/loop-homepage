@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 112" role="img" aria-labelledby="title desc">
+  <title id="title">LOOP</title><desc id="desc">Laboratorium Otwartego Oprogramowania i Prototypów</desc>
+  <g transform="translate(3 1) scale(.68)">
+    <defs><linearGradient id="lg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0cc4ca"/><stop offset="1" stop-color="#0298bd"/></linearGradient></defs>
+    <path d="M33 67A50 50 0 0 1 117 43" fill="none" stroke="url(#lg)" stroke-width="17" stroke-linecap="round"/>
+    <path d="M111 25l30 27-39 9z" fill="#08abbf"/>
+    <path d="M127 94a50 50 0 0 1-94 0" fill="none" stroke="#0b2f85" stroke-width="17" stroke-linecap="round"/>
+    <circle cx="30" cy="87" r="9" fill="#08b9c4"/><circle cx="130" cy="87" r="9" fill="#113ca3"/>
+  </g>
+  <text x="116" y="57" font-family="Inter,Arial,sans-serif" font-size="55" font-weight="800" letter-spacing="1" fill="#0b2f85">LOOP</text>
+  <text x="119" y="79" font-family="Inter,Arial,sans-serif" font-size="13.7" font-weight="700" fill="#0b2f85">Laboratorium Otwartego</text>
+  <text x="119" y="96" font-family="Inter,Arial,sans-serif" font-size="13.7" font-weight="700" fill="#0b2f85">Oprogramowania i Prototypów</text>
+</svg>

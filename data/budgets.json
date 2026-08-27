@@ -1,0 +1,18 @@
+{
+  "a800mon": {
+    "current": 3480,
+    "target": 8000
+  },
+  "godot-plugins": {
+    "current": 1780,
+    "target": 5000
+  },
+  "maszyna-reloaded": {
+    "current": 5230,
+    "target": 10000
+  },
+  "simplegamesfactory": {
+    "current": 2950,
+    "target": 7000
+  }
+}

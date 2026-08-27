@@ -1,0 +1,4 @@
+{{ define "main" }}
+<section class="page-hero"><div class="container narrow"><p class="eyebrow">{{ .Date.Format "02.01.2006" }} · Blog LOOP</p><h1>{{ .Title }}</h1><p>{{ .Params.summary }}</p></div></section>
+<section class="section"><article class="container narrow prose prose--article">{{ .Content }}</article></section>
+{{ end }}

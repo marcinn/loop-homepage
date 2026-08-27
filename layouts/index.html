@@ -1,0 +1,83 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Laboratorium Otwartego Oprogramowania i Prototypów</p>
+      <h1>Otwarte oprogramowanie.<span>•</span><br>Prototypy.<span>•</span> Społeczność.<span>•</span></h1>
+      <p class="hero-lead">LOOP wspiera rozwój projektów open source, narzędzi, symulatorów i eksperymentalnych technologii.</p>
+      <div class="hero-actions">
+        <a class="button button--primary" href="{{ "projects/" | relURL }}">Poznaj projekty</a>
+        <button class="button button--outline" type="button" data-donate-project="general" data-donate-label="LOOP">Wesprzyj LOOP</button>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="orbit orbit--one"></div>
+      <div class="orbit orbit--two"></div>
+      <img class="hero-mark" src="{{ "img/loop-mark.svg" | relURL }}" alt="">
+      <div class="code-card code-card--a"><span>&lt;/&gt;</span></div>
+      <div class="code-card code-card--b"><span>{ }</span></div>
+      <div class="code-window"><i></i><i></i><i></i><b></b><b></b><b></b><b></b></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--tight">
+  <div class="container">
+    <div class="section-title"><span class="section-icon">↗</span><h2>Wyróżnione projekty</h2></div>
+    <div class="project-grid">
+      {{ $projects := where (site.GetPage "section" "projects").Pages "Params.featured" true }}
+      {{ range $projects.ByWeight }}{{ partial "project-card.html" . }}{{ end }}
+    </div>
+    <div class="section-more"><a class="text-link" href="{{ "projects/" | relURL }}">Zobacz wszystkie projekty →</a></div>
+  </div>
+</section>
+
+<section class="section how">
+  <div class="container">
+    <div class="section-title"><span class="section-icon">◎</span><h2>Jak działamy</h2></div>
+    <div class="how-grid">
+      <article><div class="round-icon">&lt;/&gt;</div><div><h3>Rozwój open source</h3><p>Tworzymy i rozwijamy projekty, które można używać, modyfikować i współtworzyć.</p></div></article>
+      <article><div class="round-icon">◇</div><div><h3>Prototypowanie</h3><p>Eksperymentujemy z nowymi pomysłami i technologiami, budując prototypy i narzędzia badawcze.</p></div></article>
+      <article><div class="round-icon">▣</div><div><h3>Budżety projektowe</h3><p>Wsparcie może trafiać bezpośrednio do wybranego projektu i być rozliczane jako wydzielony budżet.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section support-section" id="wsparcie">
+  <div class="container support-panel">
+    <div class="support-copy">
+      <p class="eyebrow">Przejrzyste wsparcie</p>
+      <h2>Wspieraj wybrane projekty</h2>
+      <p>Darowizny celowe na konkretne projekty oraz wsparcie ogólne dla działalności LOOP.</p>
+      <div class="support-actions">
+        <button class="button button--primary" type="button" data-donate-project="general" data-donate-label="LOOP">Wesprzyj LOOP</button>
+        <a class="button button--outline" href="{{ "misja/" | relURL }}">Poznaj misję</a>
+      </div>
+    </div>
+    <div class="budgets-grid">
+      {{ range (site.GetPage "section" "projects").Pages.ByWeight }}
+        {{ $project := . }}
+        {{ with .Params.budget_id }}
+          {{ with index hugo.Data.budgets . }}
+            {{ if gt (default 0 (index . "target")) 0 }}{{ partial "budget.html" $project }}{{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+
+<section class="section latest-post">
+  <div class="container">
+    {{ $posts := where site.RegularPages "Section" "blog" }}
+    {{ with index ($posts.ByDate.Reverse) 0 }}
+      <div class="latest-card">
+        <p class="eyebrow">Z bloga</p>
+        <h2>{{ .Title }}</h2>
+        <p>{{ .Params.summary }}</p>
+        <a class="text-link" href="{{ .RelPermalink }}">Czytaj wpis →</a>
+      </div>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

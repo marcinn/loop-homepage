@@ -1,0 +1,15 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>{{ partial "logo.html" . }}</div>
+    <div class="footer-contact">
+      <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+      <a href="{{ site.Home.RelPermalink }}">LOOP</a>
+    </div>
+    <div class="footer-links">
+      <a href="{{ "misja/" | relURL }}">Misja</a>
+      <a href="{{ "blog/" | relURL }}">Blog</a>
+      <a href="{{ site.Params.statute | relURL }}">Statut (PDF)</a>
+    </div>
+    <div class="footer-copy">© {{ now.Year }} LOOP<br>Laboratorium Otwartego Oprogramowania i Prototypów</div>
+  </div>
+</footer>

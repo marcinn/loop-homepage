@@ -1,0 +1,48 @@
+baseURL = "https://marcinn.github.io/loop-homepage/"
+languageCode = "pl-pl"
+title = "LOOP — Laboratorium Otwartego Oprogramowania i Prototypów"
+enableRobotsTXT = true
+
+[taxonomies]
+  technology = "technologies"
+
+[params]
+  description = "LOOP wspiera rozwój otwartego oprogramowania, prototypów, symulatorów i eksperymentalnych technologii."
+  email = "kontakt@loop.org.pl"
+  github = "https://github.com/"
+  statute = "/downloads/statut-loop-mock.pdf"
+
+  [params.payments]
+    provider = "payu"
+    environment = "sandbox"
+    merchant_pos_id = "REPLACE_WITH_PAYU_POS_ID"
+    create_order_endpoint = "https://api.loop.org.pl/donations/payu/order"
+    currency = "PLN"
+    min_amount = 5
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
+
+[menu]
+  [[menu.main]]
+    name = "Misja"
+    url = "/misja/"
+    weight = 10
+  [[menu.main]]
+    name = "Projekty"
+    url = "/projects/"
+    weight = 20
+  [[menu.main]]
+    name = "Blog"
+    url = "/blog/"
+    weight = 30
+  [[menu.main]]
+    name = "Jak wspierać"
+    url = "/#wsparcie"
+    weight = 40
+  [[menu.main]]
+    name = "Kontakt"
+    url = "/kontakt/"
+    weight = 50

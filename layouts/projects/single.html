@@ -1,0 +1,76 @@
+{{ define "main" }}
+{{ $technologies := default (slice) .Params.technologies }}
+<section class="project-hero">
+  <div class="container project-hero-grid">
+    <div>
+      <p class="eyebrow">Projekt LOOP · {{ .Params.status }}</p>
+      <h1>{{ .Title }}</h1>
+      <p class="project-lead">{{ .Params.summary }}</p>
+      <div class="tag-row">
+        {{ range (.GetTerms "technologies") }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
+      </div>
+      <div class="hero-actions">
+        <button class="button button--primary" type="button" data-donate-project="{{ .Params.project_id }}" data-donate-label="{{ .Title }}">Wesprzyj projekt</button>
+        {{ with .Params.repository }}<a class="button button--outline" href="{{ . }}" target="_blank" rel="noopener">Repozytorium ↗</a>{{ end }}
+      </div>
+    </div>
+    <figure class="project-shot">
+      <img src="{{ .Params.image }}" alt="Podgląd projektu {{ .Title }}">
+      {{ with .Params.image_credit }}<figcaption>Źródło: {{ with $.Params.image_credit_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ . }}{{ if $.Params.image_credit_url }}</a>{{ end }}</figcaption>{{ end }}
+    </figure>
+  </div>
+</section>
+<section class="section">
+  <div class="container project-content-grid">
+    <article class="prose">
+      {{ .Content }}
+      {{ if .Params.umbrella }}
+        {{ $related := slice }}
+        {{ range (site.GetPage "section" "projects").Pages.ByWeight }}
+          {{ if and (ne .RelPermalink $.RelPermalink) (in (default (slice) .Params.technologies) "Godot") }}
+            {{ $related = $related | append . }}
+          {{ end }}
+        {{ end }}
+        {{ if gt (len $related) 0 }}
+          <section class="related-projects">
+            <h2>Powiązane projekty</h2>
+            <div class="project-grid project-grid--large">
+              {{ range $related }}{{ partial "project-card.html" . }}{{ end }}
+            </div>
+          </section>
+        {{ end }}
+      {{ end }}
+    </article>
+    <aside class="project-aside">
+      {{ $currentPage := . }}
+      {{ $budgetPage := . }}
+      {{ if not $currentPage.Params.budget_id }}
+        {{ $fundingProjectId := default "" $currentPage.Params.project_id }}
+        {{ with $fundingProjectId }}
+          {{ with index (where (site.GetPage "section" "projects").Pages "Params.budget_id" .) 0 }}
+            {{ $budgetPage = . }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{ $budgetId := default "" $budgetPage.Params.budget_id }}
+      {{ $budget := dict }}
+      {{ with $budgetId }}{{ with index hugo.Data.budgets . }}{{ $budget = . }}{{ end }}{{ end }}
+      {{ $target := default 0 (index $budget "target") }}
+      {{ if gt $target 0 }}
+        {{ if eq $budgetPage.RelPermalink $currentPage.RelPermalink }}
+          <h2>Budżet projektu</h2>
+        {{ else }}
+          <h2>Wspólny budżet</h2>
+          <p class="aside-note">Wpłaty z tego projektu trafiają do budżetu {{ $budgetPage.Title }}.</p>
+        {{ end }}
+        {{ partial "budget.html" $budgetPage }}
+      {{ else }}
+        <h2>Wspólny budżet</h2>
+        <p class="aside-note">Wpłaty z tego projektu trafiają do budżetu {{ default "Godot Plugins" .Params.funding_label }}.</p>
+      {{ end }}
+      <button class="button button--primary button--wide" type="button" data-donate-project="{{ .Params.project_id }}" data-donate-label="{{ .Title }}">Wesprzyj {{ .Title }}</button>
+      <p class="aside-note">Wpłata jest oznaczana identyfikatorem projektu, aby mogła zostać ujęta w jego budżecie analitycznym.</p>
+    </aside>
+  </div>
+</section>
+{{ end }}

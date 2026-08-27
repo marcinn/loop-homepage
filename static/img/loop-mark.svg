@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160" role="img" aria-labelledby="t d">
+  <title id="t">LOOP</title><desc id="d">Symbol pętli: dwa łuki tworzące koło, strzałka i dwa punkty.</desc>
+  <defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0cc4ca"/><stop offset="1" stop-color="#0298bd"/></linearGradient></defs>
+  <path d="M33 67A50 50 0 0 1 117 43" fill="none" stroke="url(#g)" stroke-width="17" stroke-linecap="round"/>
+  <path d="M111 25l30 27-39 9z" fill="#08abbf"/>
+  <path d="M127 94a50 50 0 0 1-94 0" fill="none" stroke="#0b2f85" stroke-width="17" stroke-linecap="round"/>
+  <circle cx="30" cy="87" r="9" fill="#08b9c4"/>
+  <circle cx="130" cy="87" r="9" fill="#113ca3"/>
+</svg>

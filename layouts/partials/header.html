@@ -1,0 +1,11 @@
+<header class="site-header">
+  <div class="container header-inner">
+    {{ partial "logo.html" . }}
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
+    <nav id="main-nav" class="main-nav" aria-label="Główna nawigacja">
+      {{ range site.Menus.main }}
+        <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+      {{ end }}
+    </nav>
+  </div>
+</header>

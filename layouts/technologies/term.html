@@ -1,0 +1,14 @@
+{{ define "main" }}
+{{ $projects := where .Pages "Section" "projects" }}
+<section class="page-hero"><div class="container"><p class="eyebrow">Filtr projektów</p><h1>{{ .LinkTitle }}</h1><p>Projekty oznaczone wybranym tagiem.</p></div></section>
+<section class="section">
+  <div class="container">
+    {{ partial "project-filters.html" (dict "active" .RelPermalink) }}
+    {{ if gt (len $projects) 0 }}
+      <div class="project-grid project-grid--large">{{ range $projects.ByWeight }}{{ partial "project-card.html" . }}{{ end }}</div>
+    {{ else }}
+      <p class="project-empty">Brak projektów dla wybranego tagu.</p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

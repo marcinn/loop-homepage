@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ .Title }} · LOOP{{ end }}</title>
+  <meta name="description" content="{{ with .Params.summary }}{{ . }}{{ else }}{{ site.Params.description }}{{ end }}">
+  <link rel="icon" href="{{ "img/loop-mark.svg" | relURL }}" type="image/svg+xml">
+  {{ $scss := resources.Get "scss/main.scss" }}
+  {{ $css := $scss | css.Sass (dict "transpiler" "libsass" "includePaths" (slice "node_modules") "outputStyle" "compressed" "targetPath" "css/main.css") | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+</head>
+<body data-site-base="{{ "/" | relURL }}" data-payment-endpoint="{{ site.Params.payments.create_order_endpoint }}" data-payment-provider="{{ site.Params.payments.provider }}" data-payment-currency="{{ site.Params.payments.currency }}" data-payment-min="{{ site.Params.payments.min_amount }}">
+  {{ partial "header.html" . }}
+  <main>{{ block "main" . }}{{ end }}</main>
+  {{ partial "footer.html" . }}
+  <div class="modal" id="donation-modal" hidden>
+    <div class="modal__backdrop" data-modal-close></div>
+    <section class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="donation-title">
+      <button class="modal__close" type="button" data-modal-close aria-label="Zamknij">×</button>
+      <p class="eyebrow">Darowizna celowa</p>
+      <h2 id="donation-title">Wesprzyj <span data-donation-project-label>projekt</span></h2>
+      <form id="donation-form">
+        <input type="hidden" name="project" value="general">
+        <div class="amount-presets" role="group" aria-label="Wybierz kwotę">
+          <button type="button" data-amount="20">20 zł</button>
+          <button type="button" data-amount="50">50 zł</button>
+          <button type="button" data-amount="100">100 zł</button>
+          <button type="button" data-amount="200">200 zł</button>
+        </div>
+        <label>Kwota
+          <div class="amount-input"><input name="amount" type="number" min="5" step="1" value="50" required><span>PLN</span></div>
+        </label>
+        <label>E-mail (opcjonalnie)
+          <input name="email" type="email" placeholder="ty@example.org">
+        </label>
+        <button class="button button--primary button--wide" type="submit">Przejdź do płatności PayU</button>
+        <p class="form-note">Płatność jest inicjowana przez bezpieczny endpoint serwerowy LOOP. Sekrety PayU nigdy nie trafiają do kodu przeglądarki.</p>
+        <p class="form-status" aria-live="polite"></p>
+      </form>
+    </section>
+  </div>
+  <script src="{{ "js/site.js" | relURL }}" defer></script>
+  <script src="{{ "js/donations.js" | relURL }}" defer></script>
+</body>
+</html>
