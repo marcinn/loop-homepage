@@ -1,7 +1,7 @@
 +++
 title = "SimpleGamesFactory"
 date = 2026-08-28T00:00:00+02:00
-summary = "Lekki zestaw bibliotek C++ do budowania małych gier na urządzeniach embedded (ESP32, Arduino) — od klasyków w stylu Arkanoida i Tetrisa po pseudo-3D strzelankę inspirowaną Wolfensteinem."
+summary = "Zestaw bibliotek C++ do budowania gier na urządzeniach embedded (ESP32, Arduino) — od klasyków w stylu Arkanoida i Tetrisa po pseudo-3D strzelankę inspirowaną Wolfensteinem."
 featured = true
 weight = 30
 status = "aktywny"
@@ -14,7 +14,7 @@ repository = "https://github.com/SimpleGamesFactory"
 technologies = ["C++", "Arduino", "ESP32", "embedded", "gry", "raycasting"]
 +++
 
-**SimpleGamesFactory (SGF)** to lekka biblioteka C++ do tworzenia małych gier na platformy embedded. Dostarcza podstawowe elementy potrzebne do zbudowania gry bez narzucania ciężkiej architektury silnika.
+**SimpleGamesFactory (SGF)** to biblioteka C++ do tworzenia gier na platformy embedded. Dostarcza podstawowe elementy potrzebne do zbudowania gry bez narzucania ciężkiej architektury silnika.
 
 W ramach projektu rozwijane są m.in. pętla gry, sceny i przełączanie między nimi, obsługa akcji wejściowych, render targety, mechanizm `dirty rectangles`, kafelkowe odświeżanie obrazu, programowe sprite'y, kolizje i prostą fizykę brył sztywnych, narzędzia do pracy z formatem RGB565 oraz sterowniki wyświetlaczy. Silnik wspiera też rendering rzutem pseudo-3D (raycasting), dzięki czemu na tym samym mikrokontrolerze da się zbudować zarówno grę 2D, jak i prostą strzelankę w klimacie wczesnych FPS-ów.
 

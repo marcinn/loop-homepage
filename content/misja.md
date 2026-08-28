@@ -21,7 +21,7 @@ Wspieramy świadome wykorzystywanie nowoczesnych technologii i narzędzi opartyc
 
 Istotną częścią tej edukacji jest interdyscyplinarność. Rozwój gier, symulatorów i systemów interaktywnych łączy programowanie między innymi z matematyką, fizyką, elektroniką, projektowaniem doświadczeń użytkownika, grafiką, dźwiękiem i zarządzaniem produkcją. Praca na styku tych dziedzin uczy komunikacji pomiędzy specjalistami, rozumienia wzajemnych zależności oraz podejmowania decyzji z perspektywy całego produktu.
 
-Edukacja w LOOP nie kończy się na doświadczonych inżynierach. Projekty takie jak [a800mon]({{< relref "/projects/a800mon" >}}), pokazujące na żywo pamięć, rejestry i pracę procesora popularnych komputerów 8-bitowych, są też przystępnym wprowadzeniem do tego, jak działa komputer — dobrym punktem startu również dla najmłodszych, dla których prosty, retrokomputerowy sprzęt bywa dużo łatwiejszy do zrozumienia niż współczesne, złożone systemy.
+Edukacja w LOOP nie kończy się na doświadczonych inżynierach. Projekty takie jak [a800mon]({{< relref "/projects/a800mon" >}}), pokazujące na żywo pamięć, rejestry i pracę procesora popularnych komputerów 8-bitowych, są też przystępnym wprowadzeniem do tego, jak działa komputer — dobrym punktem startu również dla najmłodszych, dla których retrokomputerowy sprzęt bywa dużo łatwiejszy do zrozumienia niż współczesne, złożone systemy.
 
 ## MaSzyna Reloaded
 

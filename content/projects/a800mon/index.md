@@ -1,7 +1,7 @@
 +++
 title = "a800mon"
 date = 2026-08-28T00:00:00+02:00
-summary = "Lekki monitor i debugger dla emulatorów komputerów 8-bitowych — narzędzie deweloperskie, które przy okazji uczy architektury mikroprocesorów na przykładzie popularnych maszyn, takich jak Atari."
+summary = "Monitor i debugger dla emulatorów komputerów 8-bitowych — narzędzie deweloperskie, które przy okazji uczy architektury mikroprocesorów na przykładzie popularnych maszyn, takich jak Atari."
 featured = true
 weight = 20
 status = "prototyp"
@@ -14,7 +14,7 @@ repository = "https://github.com/a800mon/a800mon"
 technologies = ["Python", "Go", "Atari 8-bit", "debugger", "protokół binarny", "6502", "edukacja"]
 +++
 
-**a800mon** to lekki frontend monitora i debuggera dla emulatorów komputerów 8-bitowych. Zamiast tworzyć kolejny emulator, projekt definiuje własny binarny protokół komunikacji i buduje nad nim wygodne UI oraz CLI.
+**a800mon** to frontend monitora i debuggera dla emulatorów komputerów 8-bitowych. Zamiast tworzyć kolejny emulator, projekt definiuje własny binarny protokół komunikacji i buduje nad nim wygodne UI oraz CLI.
 
 Pierwszym obsługiwanym backendem jest fork Atari800 z funkcją Remote Monitor, ale architektura zakłada, że ten sam frontend może współpracować z innymi emulatorami, a docelowo także z urządzeniami sprzętowymi implementującymi ten sam protokół.
 

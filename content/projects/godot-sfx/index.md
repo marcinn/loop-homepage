@@ -1,7 +1,7 @@
 +++
 title = "Godot SFX"
 date = 2026-08-28T00:00:00+02:00
-summary = "Prosty, otwarty system efektów dźwiękowych dla Godot, inspirowany workflow FMOD."
+summary = "Otwarty system efektów dźwiękowych dla Godota, inspirowany workflow FMOD."
 featured = true
 weight = 41
 status = "prototyp"

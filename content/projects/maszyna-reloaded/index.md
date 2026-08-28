@@ -2,7 +2,9 @@
 title = "MaSzyna Reloaded"
 date = 2026-08-28T00:00:00+02:00
 summary = "Nowa generacja otwartego symulatora kolejowego budowana na Godot Engine, z mostem do sprawdzonej fizyki MaSzyny."
+card_summary = "Nowa generacja otwartego symulatora kolejowego budowana na Godot Engine, z mostem do sprawdzonej fizyki MaSzyny. Projekt łączy dotychczasowy dorobek MaSzyny z nową architekturą: własnymi węzłami Godota, wysokopoziomowym API, rendererami infrastruktury i warstwą integrującą fizykę pojazdów — z myślą o środowisku wygodnym zarówno dla graczy, jak i twórców."
 featured = true
+highlight = true
 weight = 10
 status = "aktywny"
 project_id = "maszyna-reloaded"
