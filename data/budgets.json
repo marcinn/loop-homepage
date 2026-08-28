@@ -5,7 +5,7 @@
     "scope": "monthly"
   },
   "general": {
-    "current": 0,
+    "current": 600,
     "target": 1000,
     "scope": "monthly"
   },
