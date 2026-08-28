@@ -13,6 +13,7 @@ image = "img/projects/maszyna-reloaded/tabor-kopalnia.jpg"
 image_credit = "MaSzyna Reloaded"
 image_credit_url = "https://github.com/MaSzyna-Reloaded"
 repository = "https://github.com/MaSzyna-Reloaded"
+discord = "https://discord.gg/BC3mDQn2ZD"
 technologies = ["Godot Engine", "C++", "GDExtension", "symulacja kolejowa"]
 +++
 

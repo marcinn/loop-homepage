@@ -12,6 +12,7 @@
       <div class="hero-actions">
         {{ if site.Params.support_enabled }}<button class="button button--primary" type="button" data-donate-project="{{ .Params.project_id }}" data-donate-label="{{ .Title }}">Wesprzyj projekt</button>{{ end }}
         {{ with .Params.repository }}<a class="button button--outline" href="{{ . }}" target="_blank" rel="noopener">Repozytorium ↗</a>{{ end }}
+        {{ with .Params.discord }}<a class="button button--outline" href="{{ . }}" target="_blank" rel="noopener">Discord ↗</a>{{ end }}
       </div>
     </div>
     <figure class="project-shot">

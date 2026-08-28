@@ -11,6 +11,7 @@ image = "img/projects/a800mon/montezuma.jpg"
 image_credit = "a800mon / YouTube"
 image_credit_url = "https://www.youtube.com/watch?v=9Co0CPifd6Y"
 repository = "https://github.com/a800mon/a800mon"
+discord = "https://discord.gg/wNZjKgFunJ"
 technologies = ["Python", "Go", "Atari 8-bit", "debugger", "protokół binarny", "6502", "edukacja"]
 +++
 

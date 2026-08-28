@@ -10,6 +10,7 @@ image = "https://img.youtube.com/vi/HVeNv4ePlgU/maxresdefault.jpg"
 image_credit = "GamesNotDeveloped / YouTube"
 image_credit_url = "https://www.youtube.com/watch?v=HVeNv4ePlgU"
 repository = "https://github.com/GamesNotDeveloped/godot-weather-system"
+discord = "https://discord.gg/yrkrHETcCC"
 funding_label = "Godot Plugins"
 technologies = ["Godot", "Godot Engine", "GDScript", "pogoda", "procedural generation"]
 +++
