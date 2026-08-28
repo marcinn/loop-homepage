@@ -1,0 +1,10 @@
+{{ $src := .Get "src" }}
+{{ $poster := .Get "poster" }}
+{{ $title := .Get "title" }}
+<figure class="project-video">
+  <video controls preload="metadata" playsinline{{ with $poster }} poster="{{ . | relURL }}"{{ end }} aria-label="{{ $title }}">
+    <source src="{{ $src | relURL }}" type="video/mp4">
+    Twoja przeglądarka nie obsługuje odtwarzania wideo. <a href="{{ $src | relURL }}">Pobierz film</a>.
+  </video>
+  {{ with .Get "source" }}<figcaption><a href="{{ . }}" target="_blank" rel="noopener">Źródło: X / mjndev</a></figcaption>{{ end }}
+</figure>

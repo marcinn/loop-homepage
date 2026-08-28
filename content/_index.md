@@ -1,4 +1,4 @@
 +++
 title = "LOOP"
-description = "Otwarte oprogramowanie, prototypy i społeczność."
+description = "Fundacja wspierająca rozwój otwartego oprogramowania, prototypów i eksperymentalnych technologii."
 +++

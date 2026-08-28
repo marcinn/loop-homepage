@@ -1,4 +1,4 @@
 +++
 title = "Projekty"
-description = "Otwarte projekty rozwijane i wspierane przez LOOP. Każdy może mieć własny cel, budżet i społeczność."
+description = "Otwarte projekty rozwijane pod parasolem LOOP — każdy z własnym celem, budżetem i społecznością."
 +++

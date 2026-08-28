@@ -1,7 +1,7 @@
 {{ $p := . }}
 <article class="project-card">
   <a class="project-card__image" href="{{ $p.RelPermalink }}">
-    <img src="{{ $p.Params.image }}" alt="Podgląd projektu {{ $p.Title }}" loading="lazy">
+    <img src="{{ if hasPrefix $p.Params.image "http" }}{{ $p.Params.image }}{{ else }}{{ $p.Params.image | relURL }}{{ end }}" alt="Podgląd projektu {{ $p.Title }}" loading="lazy">
   </a>
   <div class="project-card__body">
     <div class="project-card__topline">

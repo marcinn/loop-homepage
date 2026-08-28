@@ -8,17 +8,15 @@ status = "ciągły rozwój"
 project_id = "godot-plugins"
 budget_id = "godot-plugins"
 umbrella = true
-image = "https://raw.githubusercontent.com/KaanAlpar/godot-plugin-course-line-up-tool/main/lineup_tool_ss2.png"
-image_credit = "Ilustracja środowiska Godot: Line Up Tool / MIT"
-image_credit_url = "https://godotengine.org/asset-library/asset/3165"
+image = "img/projects/godot-plugins/godot-editor.jpg"
+image_credit = "Godot Engine editor / godotengine/godot-design"
+image_credit_url = "https://github.com/godotengine/godot-design/tree/master/screenshots"
 repository = ""
 technologies = ["Godot", "Godot Engine", "GDScript", "C++", "GDExtension", "tooling"]
 +++
 
-**Godot Plugins** to parasol dla niewielkich narzędzi rozwijanych przy okazji większych projektów: pluginów edytora, klas GDExtension, importerów, narzędzi developerskich i komponentów, które warto wydzielić i udostępnić społeczności.
+**Godot Plugins** to parasol dla niewielkich narzędzi rozwijanych przy okazji większych projektów: pluginów edytora, klas GDExtension, importerów, narzędzi deweloperskich i komponentów, które warto wydzielić i udostępnić społeczności.
 
-Założeniem jest publikowanie elementów możliwie niezależnych od pojedynczego projektu. Dzięki temu kod powstały podczas pracy nad symulatorem, prototypem czy grą może wrócić do ekosystemu Godota jako użyteczne, otwarte narzędzie.
+Założeniem jest publikowanie elementów możliwie niezależnych od pojedynczego projektu — kod powstały przy okazji pracy nad symulatorem, prototypem czy grą może w ten sposób wrócić do ekosystemu Godota jako samodzielne, otwarte narzędzie.
 
-Ten budżet obejmuje m.in. Godot SFX, Godot UniPlayer i Godot Weather System. Wpłaty z podstron tych projektów są przypisywane do wspólnego identyfikatora `godot-plugins`, żeby finansowanie pozostało w jednym koszyku.
-
-*Obraz użyty w wersji demonstracyjnej landinga jest ilustracją środowiska Godot i powinien zostać zastąpiony screenem jednego z własnych pluginów LOOP.*
+Do tego budżetu należą m.in. Godot SFX, Godot UniPlayer i Godot Weather System — zamiast osobnej, drobnej zbiórki dla każdego z nich, wpłaty na te projekty zasilają jeden wspólny budżet Godot Plugins.

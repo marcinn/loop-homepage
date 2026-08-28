@@ -1,4 +1,4 @@
 +++
 title = "Blog"
-description = "Aktualności z projektów, prototypów i działalności LOOP."
+description = "Nowości z projektów, prototypów i bieżącej działalności LOOP."
 +++

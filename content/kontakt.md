@@ -7,6 +7,6 @@ summary = "Kontakt z LOOP, współpraca i zgłaszanie projektów."
 
 **WWW:** [loop.org.pl](https://loop.org.pl/)
 
-Jeśli chcesz współtworzyć projekt, zaproponować nowy projekt pod parasolem LOOP albo wesprzeć działalność rzeczowo, napisz kilka zdań o pomyśle i zakresie współpracy.
+Jeśli chcesz dołączyć do rozwoju istniejącego projektu, zaproponować nowy projekt pod parasolem LOOP albo wesprzeć naszą działalność rzeczowo, napisz kilka zdań o pomyśle i zakresie współpracy.
 
-Dane rejestrowe fundacji zostaną uzupełnione po rejestracji.
+Dane rejestrowe fundacji zostaną uzupełnione po zakończeniu rejestracji.

@@ -10,7 +10,7 @@ enableRobotsTXT = true
   description = "LOOP wspiera rozwój otwartego oprogramowania, prototypów, symulatorów i eksperymentalnych technologii."
   email = "kontakt@loop.org.pl"
   github = "https://github.com/"
-  statute = "/downloads/statut-loop-mock.pdf"
+  statute = "downloads/statut-loop-mock.pdf"
 
   [params.payments]
     provider = "payu"

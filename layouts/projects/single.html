@@ -15,7 +15,7 @@
       </div>
     </div>
     <figure class="project-shot">
-      <img src="{{ .Params.image }}" alt="Podgląd projektu {{ .Title }}">
+      <img src="{{ if hasPrefix .Params.image "http" }}{{ .Params.image }}{{ else }}{{ .Params.image | relURL }}{{ end }}" alt="Podgląd projektu {{ .Title }}">
       {{ with .Params.image_credit }}<figcaption>Źródło: {{ with $.Params.image_credit_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ . }}{{ if $.Params.image_credit_url }}</a>{{ end }}</figcaption>{{ end }}
     </figure>
   </div>
@@ -69,7 +69,7 @@
         <p class="aside-note">Wpłaty z tego projektu trafiają do budżetu {{ default "Godot Plugins" .Params.funding_label }}.</p>
       {{ end }}
       <button class="button button--primary button--wide" type="button" data-donate-project="{{ .Params.project_id }}" data-donate-label="{{ .Title }}">Wesprzyj {{ .Title }}</button>
-      <p class="aside-note">Wpłata jest oznaczana identyfikatorem projektu, aby mogła zostać ujęta w jego budżecie analitycznym.</p>
+      <p class="aside-note">Wpłata jest oznaczana identyfikatorem projektu, dzięki czemu można ją przypisać do jego budżetu.</p>
     </aside>
   </div>
 </section>

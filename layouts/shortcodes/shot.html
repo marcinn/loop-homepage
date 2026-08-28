@@ -1,0 +1,4 @@
+<figure class="project-shot">
+  <img src="{{ if hasPrefix (.Get "src") "http" }}{{ .Get "src" }}{{ else }}{{ (.Get "src") | relURL }}{{ end }}" alt="{{ .Get "alt" }}">
+  {{ with .Get "caption" }}<figcaption>{{ . | safeHTML }}</figcaption>{{ end }}
+</figure>

@@ -3,8 +3,8 @@
   <div class="container hero-grid">
     <div class="hero-copy">
       <p class="eyebrow">Laboratorium Otwartego Oprogramowania i Prototypów</p>
-      <h1>Otwarte oprogramowanie.<span>•</span><br>Prototypy.<span>•</span> Społeczność.<span>•</span></h1>
-      <p class="hero-lead">LOOP wspiera rozwój projektów open source, narzędzi, symulatorów i eksperymentalnych technologii.</p>
+      <h1>Otwarte oprogramowanie<span>•</span><br>Nauka<span>•</span> Sztuczna inteligencja<span>•</span></h1>
+      <p class="hero-lead">LOOP wspiera rozwój otwartych projektów, narzędzi deweloperskich, symulatorów i eksperymentalnych technologii.</p>
       <div class="hero-actions">
         <a class="button button--primary" href="{{ "projects/" | relURL }}">Poznaj projekty</a>
         <button class="button button--outline" type="button" data-donate-project="general" data-donate-label="LOOP">Wesprzyj LOOP</button>
@@ -24,9 +24,10 @@
 <section class="section section--tight">
   <div class="container">
     <div class="section-title"><span class="section-icon">↗</span><h2>Wyróżnione projekty</h2></div>
-    <div class="project-grid">
-      {{ $projects := where (site.GetPage "section" "projects").Pages "Params.featured" true }}
-      {{ range $projects.ByWeight }}{{ partial "project-card.html" . }}{{ end }}
+    <div class="project-grid project-grid--featured">
+      {{ range (slice "maszyna-reloaded" "godot-plugins" "simplegamesfactory" "a800mon") }}
+        {{ with site.GetPage (printf "/projects/%s" .) }}{{ partial "project-card.html" . }}{{ end }}
+      {{ end }}
     </div>
     <div class="section-more"><a class="text-link" href="{{ "projects/" | relURL }}">Zobacz wszystkie projekty →</a></div>
   </div>
@@ -37,7 +38,7 @@
     <div class="section-title"><span class="section-icon">◎</span><h2>Jak działamy</h2></div>
     <div class="how-grid">
       <article><div class="round-icon">&lt;/&gt;</div><div><h3>Rozwój open source</h3><p>Tworzymy i rozwijamy projekty, które można używać, modyfikować i współtworzyć.</p></div></article>
-      <article><div class="round-icon">◇</div><div><h3>Prototypowanie</h3><p>Eksperymentujemy z nowymi pomysłami i technologiami, budując prototypy i narzędzia badawcze.</p></div></article>
+      <article><div class="round-icon">◇</div><div><h3>Prototypowanie</h3><p>Eksperymentujemy z nowymi pomysłami i technologiami, zamieniając je w działające prototypy.</p></div></article>
       <article><div class="round-icon">▣</div><div><h3>Budżety projektowe</h3><p>Wsparcie może trafiać bezpośrednio do wybranego projektu i być rozliczane jako wydzielony budżet.</p></div></article>
     </div>
   </div>
