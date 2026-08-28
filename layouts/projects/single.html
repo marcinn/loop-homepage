@@ -15,7 +15,7 @@
       </div>
     </div>
     <figure class="project-shot">
-      <img src="{{ if hasPrefix .Params.image "http" }}{{ .Params.image }}{{ else }}{{ .Params.image | relURL }}{{ end }}" alt="Podgląd projektu {{ .Title }}">
+      <img src="{{ partial "img.html" .Params.image }}" alt="Podgląd projektu {{ .Title }}">
       {{ with .Params.image_credit }}<figcaption>Źródło: {{ with $.Params.image_credit_url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ . }}{{ if $.Params.image_credit_url }}</a>{{ end }}</figcaption>{{ end }}
     </figure>
   </div>

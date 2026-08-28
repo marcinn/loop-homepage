@@ -1,0 +1,10 @@
+{{- $path := . -}}
+{{- if hasPrefix $path "http" -}}
+  {{ $path }}
+{{- else -}}
+  {{- with resources.Get $path -}}
+    {{ (. | fingerprint).RelPermalink }}
+  {{- else -}}
+    {{ $path | relURL }}
+  {{- end -}}
+{{- end -}}
