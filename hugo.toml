@@ -1,4 +1,4 @@
-baseURL = "https://marcinn.github.io/loop-homepage/"
+baseURL = "https://loop.org.pl/"
 languageCode = "pl-pl"
 title = "LOOP — Laboratorium Otwartego Oprogramowania i Prototypów"
 enableRobotsTXT = true

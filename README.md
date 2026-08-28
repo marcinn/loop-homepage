@@ -56,7 +56,7 @@ Wersja demo korzysta z publicznych URL-i źródłowych. Przed wdrożeniem produk
 
 ## GitHub Pages
 
-Repozytorium jest przygotowane do publikacji przez GitHub Actions. Workflow `.github/workflows/pages.yml` buduje Hugo Extended i publikuje katalog `public/` przez oficjalne GitHub Pages Actions. `baseURL` w workflow jest pobierany z `actions/configure-pages`, więc projekt działa zarówno pod `https://marcinn.github.io/loop-homepage/`, jak i po późniejszym podpięciu własnej domeny.
+Repozytorium jest przygotowane do publikacji przez GitHub Actions. Workflow `.github/workflows/pages.yml` buduje Hugo Extended i publikuje katalog `public/` przez oficjalne GitHub Pages Actions. `baseURL` w workflow jest pobierany z `actions/configure-pages`, więc projekt automatycznie buduje się pod aktualnie skonfigurowaną domeną — obecnie własną, `https://loop.org.pl/` (plik `static/CNAME` utrwala to ustawienie; wcześniej strona działała pod `https://marcinn.github.io/loop-homepage/`).
 
 Po pierwszym pushu ustaw w repozytorium **Settings → Pages → Build and deployment → Source: GitHub Actions**.
 
