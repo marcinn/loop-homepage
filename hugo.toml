@@ -11,6 +11,7 @@ enableRobotsTXT = true
   email = "kontakt@loop.org.pl"
   github = "https://github.com/"
   statute = "downloads/statut-loop-mock.pdf"
+  support_enabled = false
 
   [params.payments]
     provider = "payu"
@@ -39,6 +40,7 @@ enableRobotsTXT = true
     url = "/blog/"
     weight = 30
   [[menu.main]]
+    identifier = "support"
     name = "Jak wspierać"
     url = "/#wsparcie"
     weight = 40

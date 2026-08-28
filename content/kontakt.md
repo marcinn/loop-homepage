@@ -11,7 +11,7 @@ Jeśli chcesz dołączyć do rozwoju istniejącego projektu, zaproponować nowy 
 
 ## Fundator i założyciel
 
-Fundatorem fundacji oraz założycielem projektu LOOP jest **Marcin Nowak** — inżynier oprogramowania i twórca otwartych projektów technologicznych. Jego działalność łączy architekturę i optymalizację oprogramowania, tworzenie narzędzi deweloperskich, symulację, technologie gier oraz programowanie urządzeń wbudowanych.
+Fundatorem fundacji oraz założycielem projektu LOOP jest **Marcin Nowak** — architekt systemów, programista i twórca otwartych projektów technologicznych. W swojej pracy zajmuje się projektowaniem i optymalizacją systemów, tworzeniem narzędzi deweloperskich oraz oprogramowania z obszaru symulacji, technologii gier i systemów wbudowanych.
 
 LOOP powstał z jego inicjatywy jako trwałe zaplecze dla projektów rozwijanych na rzecz domeny publicznej. Celem jest nie tylko udostępnianie kodu źródłowego, lecz także doprowadzanie otwartych przedsięwzięć do postaci kompletnych, działających produktów oraz tworzenie warunków do praktycznej nauki inżynierii oprogramowania na rzeczywistych projektach.
 

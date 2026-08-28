@@ -14,11 +14,11 @@
   {{ $css := $scss | css.Sass (dict "transpiler" "libsass" "includePaths" (slice "node_modules") "outputStyle" "compressed" "targetPath" "css/main.css") | fingerprint }}
   <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 </head>
-<body data-site-base="{{ "/" | relURL }}" data-payment-endpoint="{{ site.Params.payments.create_order_endpoint }}" data-payment-provider="{{ site.Params.payments.provider }}" data-payment-currency="{{ site.Params.payments.currency }}" data-payment-min="{{ site.Params.payments.min_amount }}">
+<body data-site-base="{{ "/" | relURL }}" data-support-enabled="{{ if site.Params.support_enabled }}true{{ else }}false{{ end }}"{{ if site.Params.support_enabled }} data-payment-endpoint="{{ site.Params.payments.create_order_endpoint }}" data-payment-provider="{{ site.Params.payments.provider }}" data-payment-currency="{{ site.Params.payments.currency }}" data-payment-min="{{ site.Params.payments.min_amount }}"{{ end }}>
   {{ partial "header.html" . }}
   <main>{{ block "main" . }}{{ end }}</main>
   {{ partial "footer.html" . }}
-  <div class="modal" id="donation-modal" hidden>
+  {{ if site.Params.support_enabled }}<div class="modal" id="donation-modal" hidden>
     <div class="modal__backdrop" data-modal-close></div>
     <section class="modal__panel" role="dialog" aria-modal="true" aria-labelledby="donation-title">
       <button class="modal__close" type="button" data-modal-close aria-label="Zamknij">×</button>
@@ -42,8 +42,8 @@
         <p class="form-status" aria-live="polite"></p>
       </form>
     </section>
-  </div>
+  </div>{{ end }}
   <script src="{{ "js/site.js" | relURL }}" defer></script>
-  <script src="{{ "js/donations.js" | relURL }}" defer></script>
+  {{ if site.Params.support_enabled }}<script src="{{ "js/donations.js" | relURL }}" defer></script>{{ end }}
 </body>
 </html>

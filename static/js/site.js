@@ -10,7 +10,7 @@
   }
 
   const params = new URLSearchParams(window.location.search);
-  if (params.get('payment') === 'thanks') {
+  if (document.body.dataset.supportEnabled === 'true' && params.get('payment') === 'thanks') {
     const bar = document.createElement('div');
     bar.className = 'payment-thanks';
     bar.textContent = 'Dziękujemy za wsparcie LOOP.';

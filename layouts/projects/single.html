@@ -10,7 +10,7 @@
         {{ range (.GetTerms "technologies") }}<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>{{ end }}
       </div>
       <div class="hero-actions">
-        <button class="button button--primary" type="button" data-donate-project="{{ .Params.project_id }}" data-donate-label="{{ .Title }}">Wesprzyj projekt</button>
+        {{ if site.Params.support_enabled }}<button class="button button--primary" type="button" data-donate-project="{{ .Params.project_id }}" data-donate-label="{{ .Title }}">Wesprzyj projekt</button>{{ end }}
         {{ with .Params.repository }}<a class="button button--outline" href="{{ . }}" target="_blank" rel="noopener">Repozytorium ↗</a>{{ end }}
       </div>
     </div>
@@ -21,7 +21,7 @@
   </div>
 </section>
 <section class="section">
-  <div class="container project-content-grid">
+  <div class="container project-content-grid{{ if not site.Params.support_enabled }} project-content-grid--wide{{ end }}">
     <article class="prose">
       {{ .Content }}
       {{ if .Params.umbrella }}
@@ -41,7 +41,7 @@
         {{ end }}
       {{ end }}
     </article>
-    <aside class="project-aside">
+    {{ if site.Params.support_enabled }}<aside class="project-aside">
       {{ $currentPage := . }}
       {{ $budgetPage := . }}
       {{ if not $currentPage.Params.budget_id }}
@@ -70,7 +70,7 @@
       {{ end }}
       <button class="button button--primary button--wide" type="button" data-donate-project="{{ .Params.project_id }}" data-donate-label="{{ .Title }}">Wesprzyj {{ .Title }}</button>
       <p class="aside-note">Wpłata jest oznaczana identyfikatorem projektu, dzięki czemu można ją przypisać do jego budżetu.</p>
-    </aside>
+    </aside>{{ end }}
   </div>
 </section>
 {{ end }}

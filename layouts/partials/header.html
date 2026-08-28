@@ -4,7 +4,13 @@
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav">Menu</button>
     <nav id="main-nav" class="main-nav" aria-label="Główna nawigacja">
       {{ range site.Menus.main }}
-        <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+        {{ if or site.Params.support_enabled (ne .Identifier "support") }}
+          {{ if eq .Identifier "support" }}
+            <a href="{{ site.Home.RelPermalink }}#wsparcie">{{ .Name }}</a>
+          {{ else }}
+            <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+          {{ end }}
+        {{ end }}
       {{ end }}
     </nav>
   </div>
