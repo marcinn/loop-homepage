@@ -3,45 +3,46 @@ title = "Misja"
 summary = "Otwarte technologie dla domeny publicznej, kompletne produkty i praktyczna edukacja inżynierska."
 +++
 
-LOOP tworzy otwarte technologie dla domeny publicznej oraz zapewnia organizacyjne i edukacyjne zaplecze projektom, którym sama obecność w repozytorium nie wystarcza do dalszego rozwoju.
+LOOP jest fundacją działającą na rzecz rozwoju otwartych technologii oraz kompetencji niezbędnych do ich odpowiedzialnego projektowania, wytwarzania i utrzymania. Rezultaty tej działalności mają stanowić trwały, publicznie dostępny zasób oprogramowania, narzędzi i wiedzy.
 
-## Po co powstał LOOP
+## Cele działalności
 
-Rozwijamy otwarte oprogramowanie, symulatory, narzędzia deweloperskie i eksperymentalne technologie. Kod w projektach LOOP powstaje wyłącznie jako open source i jest udostępniany na otwartych licencjach. W ten sposób budujemy wspólny, publicznie dostępny zasób technologii i wiedzy, który może być badany, rozwijany i ponownie wykorzystywany niezależnie od fundacji.
+Podstawowym celem LOOP jest inicjowanie, rozwijanie i długoterminowe utrzymywanie projektów open source o wartości użytkowej, technicznej lub edukacyjnej. Kod powstający w ramach fundacji jest publikowany na otwartych licencjach, tak aby mógł być analizowany, modyfikowany i wykorzystywany niezależnie od organizacji, która zainicjowała jego rozwój.
 
-Fundacja zapewnia projektom wspólną infrastrukturę, możliwość przyjmowania wsparcia finansowego i przejrzysty podział budżetów. Naszym celem nie jest jednak samo publikowanie kodu ani tworzenie demonstratorów. Dążymy do powstawania działających, kompletnych produktów: narzędzi, bibliotek, komponentów, aplikacji i symulatorów, które rozwiązują konkretne problemy i mogą być rzeczywiście używane przez odbiorców oraz dalej rozwijane przez społeczność.
+Fundacja zapewnia projektom zaplecze organizacyjne i techniczne, wspólną infrastrukturę oraz przejrzysty model finansowania. Miarą powodzenia nie jest sama publikacja repozytorium ani przygotowanie demonstratora. Działania LOOP mają prowadzić do powstawania kompletnych i użytecznych produktów: bibliotek, narzędzi deweloperskich, komponentów, aplikacji oraz symulatorów, które rozwiązują określone problemy i mogą być dalej rozwijane przez społeczność.
 
-Równolegle tworzymy środowisko praktycznej nauki inżynierii oprogramowania. Wiedza powstaje i jest przekazywana podczas pracy nad rzeczywistymi, publicznie dostępnymi projektami, dzięki czemu uczestnicy mogą poznawać nie tylko pojedyncze technologie, lecz także pełny cykl wytwarzania produktu cyfrowego.
+## Edukacja inżynierska
 
-## Edukacja przez praktykę
+Działalność edukacyjna LOOP jest bezpośrednio związana z realizacją rzeczywistych projektów. Uczestnicy poznają pełny cykl wytwarzania oprogramowania: analizę problemu, projektowanie architektury, planowanie prac, implementację, optymalizację, testowanie, dokumentowanie, publikację, utrzymanie oraz zarządzanie ryzykiem technicznym.
 
-Naszym celem jest rozwijanie kompetencji obejmujących architekturę systemów, projektowanie i jakość kodu, optymalizację, planowanie prac, zarządzanie ryzykiem oraz organizację procesu produkcji i utrzymania oprogramowania. Projekty LOOP mają umożliwiać zdobywanie doświadczenia w warunkach zbliżonych do profesjonalnej pracy zespołowej: od rozpoznania problemu i budowy prototypu, przez podejmowanie decyzji technicznych, po testowanie, dokumentowanie, publikację i dalszy rozwój rozwiązania.
+Taki model pozwala rozwijać umiejętność podejmowania i uzasadniania decyzji inżynierskich w warunkach odpowiadających profesjonalnej pracy nad produktem. Obejmuje zarówno jakość kodu i niezawodność systemu, jak i organizację procesu produkcyjnego, współpracę zespołową oraz odpowiedzialność za długofalowe skutki przyjętych rozwiązań.
 
-Wspieramy świadome wykorzystywanie nowoczesnych technologii i narzędzi opartych na sztucznej inteligencji. Traktujemy je jako element warsztatu inżynierskiego, który wymaga umiejętnej oceny rezultatów, rozumienia ograniczeń, dbałości o bezpieczeństwo oraz zachowania odpowiedzialności za wytwarzane rozwiązania.
+Program edukacyjny jest adresowany do osób o różnym poziomie doświadczenia. [a800mon]({{< relref "/projects/a800mon" >}}) umożliwia obserwowanie pamięci, rejestrów procesora i wykonywania programu w komputerach 8-bitowych, dzięki czemu może służyć zarówno specjalistycznej analizie, jak i przystępnemu nauczaniu podstaw architektury komputerów.
 
-Istotną częścią tej edukacji jest interdyscyplinarność. Rozwój gier, symulatorów i systemów interaktywnych łączy programowanie między innymi z matematyką, fizyką, elektroniką, projektowaniem doświadczeń użytkownika, grafiką, dźwiękiem i zarządzaniem produkcją. Praca na styku tych dziedzin uczy komunikacji pomiędzy specjalistami, rozumienia wzajemnych zależności oraz podejmowania decyzji z perspektywy całego produktu.
+## Nowoczesne technologie i interdyscyplinarność
 
-Edukacja w LOOP nie kończy się na doświadczonych inżynierach. Projekty takie jak [a800mon]({{< relref "/projects/a800mon" >}}), pokazujące na żywo pamięć, rejestry i pracę procesora popularnych komputerów 8-bitowych, są też przystępnym wprowadzeniem do tego, jak działa komputer — dobrym punktem startu również dla najmłodszych, dla których retrokomputerowy sprzęt bywa dużo łatwiejszy do zrozumienia niż współczesne, złożone systemy.
+LOOP wspiera świadome wykorzystanie współczesnych technologii, w tym narzędzi opartych na sztucznej inteligencji. Ich zastosowanie podlega tym samym wymaganiom co pozostałe elementy procesu inżynierskiego: rezultaty muszą być weryfikowalne, bezpieczne, zgodne z przyjętymi standardami jakości i objęte odpowiedzialnością człowieka.
 
-## MaSzyna Reloaded
+Projekty z obszaru gier, symulacji i systemów interaktywnych wymagają łączenia informatyki z matematyką, fizyką, elektroniką, projektowaniem doświadczeń użytkownika, grafiką, dźwiękiem oraz zarządzaniem produkcją. Fundacja traktuje tę interdyscyplinarność jako istotną wartość: umożliwia ona wymianę wiedzy pomiędzy specjalistami i sprzyja projektowaniu rozwiązań ocenianych z perspektywy całego produktu, a nie wyłącznie pojedynczej technologii.
 
-Szczególne miejsce w działalności fundacji zajmuje [MaSzyna Reloaded]({{< relref "/projects/maszyna-reloaded" >}}). Celem projektu jest przeniesienie cenionego, otwartoźródłowego symulatora kolejowego MaSzyna na współczesny stos technologiczny, bez utraty jego najważniejszej wartości: rozbudowanej i wiarygodnej symulacji fizyki pojazdów szynowych.
+## Projekt strategiczny: MaSzyna Reloaded
 
-Projekt łączy zachowanie wieloletniego dorobku MaSzyny z budową nowoczesnej, modułowej architektury opartej na Godot Engine. Obejmuje rozwój narzędzi dla twórców, importerów danych, rendererów infrastruktury i warstwy integrującej istniejący model fizyczny. Bazowymi platformami symulatora pozostają komputery PC z systemami Windows i Linux. Równolegle projekt ma otworzyć MaSzynę na nowe platformy, przede wszystkim urządzenia z systemem Android, a w dalszej perspektywie także inne środowiska, do których dotychczasowa technologia ograniczała dostęp.
+[MaSzyna Reloaded]({{< relref "/projects/maszyna-reloaded" >}}) jest jednym z kluczowych przedsięwzięć fundacji. Jego celem jest przeniesienie cenionego, otwartoźródłowego symulatora kolejowego MaSzyna na współczesny stos technologiczny przy zachowaniu rozbudowanego i wiarygodnego modelu fizyki pojazdów szynowych.
 
-MaSzyna Reloaded jest zarazem przykładem pełnej realizacji misji LOOP: chroni i rozwija otwarty dorobek, prowadzi do powstania kompletnego produktu, wymaga współpracy wielu specjalizacji oraz tworzy rzeczywiste środowisko do nauki nowoczesnej inżynierii oprogramowania.
+Projekt obejmuje budowę modułowej architektury opartej na Godot Engine, rozwój narzędzi dla twórców, importerów danych, rendererów infrastruktury oraz warstwy integrującej istniejący model fizyczny. Podstawowymi platformami pozostają komputery PC z systemami Windows i Linux. Android stanowi nową platformę docelową, a przyjęta architektura ma umożliwić w przyszłości rozszerzanie dostępności symulatora również na kolejne środowiska.
 
-## Jak pracujemy
+MaSzyna Reloaded łączy ochronę wieloletniego dorobku otwartego projektu z budową kompletnego produktu, modernizacją technologiczną, współpracą wielu specjalizacji i praktycznym kształceniem w zakresie inżynierii oprogramowania. Z tego względu stanowi modelowy przykład realizacji misji LOOP.
 
-- kod powstaje wyłącznie jako open source, a dokumentację publikujemy otwarcie,
-- każdy projekt zachowuje własną tożsamość, cele i sposób rozwoju,
-- wpłaty celowe trafiają bezpośrednio do budżetu wskazanego projektu,
-- eksperyment i prototyp traktujemy jako wartościowe narzędzia poznawcze prowadzące do działających rozwiązań,
-- rozwijamy projekty z myślą o dostarczeniu kompletnych produktów gotowych do rzeczywistego użycia,
-- wspólne komponenty wydzielamy tak, aby mogły służyć też innym projektom,
-- dokumentujemy proces i decyzje techniczne, aby rezultaty pracy mogły służyć również edukacji,
-- tworzymy przestrzeń do współpracy osób o różnym poziomie doświadczenia i z różnych dziedzin.
+## Zasady realizacji projektów
 
-## Zakres działania
+- kod powstaje wyłącznie jako open source, a dokumentacja jest publikowana w sposób umożliwiający wykorzystanie rezultatów przez innych,
+- projekty zachowują własną tożsamość, cele i odpowiedzialność za kierunek rozwoju,
+- finansowanie celowe jest przypisywane do wskazanych projektów i prezentowane w przejrzysty sposób,
+- prototypowanie służy weryfikacji założeń i ograniczaniu ryzyka, natomiast docelowym rezultatem pozostaje działające rozwiązanie,
+- komponenty o szerszym zastosowaniu są wydzielane i udostępniane do ponownego wykorzystania,
+- proces projektowy i decyzje techniczne są dokumentowane również z myślą o ich wartości edukacyjnej,
+- współpraca jest otwarta dla osób o różnym poziomie doświadczenia oraz reprezentujących różne dziedziny.
 
-LOOP nie ogranicza się do jednej dziedziny. Symulacja kolejowa, narzędzia dla retrokomputerów, gry na urządzenia embedded czy pluginy do silników gier mogą należeć do tego samego ekosystemu — liczy się to, że są rozwijane jako otwarte technologie oraz tworzą warunki do zdobywania i wymiany praktycznej wiedzy.
+## Obszary działalności
+
+Zakres działania LOOP nie jest ograniczony do jednej branży. Obejmuje między innymi symulację kolejową, narzędzia dla retrokomputerów, oprogramowanie dla urządzeń wbudowanych oraz komponenty rozszerzające silniki gier. Wspólnym kryterium pozostaje otwartość rezultatów, rzeczywista wartość użytkowa oraz możliwość wykorzystania projektu do rozwoju i wymiany wiedzy.

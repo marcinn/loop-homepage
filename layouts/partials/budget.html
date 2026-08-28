@@ -1,18 +1,4 @@
 {{ $budgetId := default "" .Params.budget_id }}
 {{ $budget := dict }}
 {{ with $budgetId }}{{ with index hugo.Data.budgets . }}{{ $budget = . }}{{ end }}{{ end }}
-{{ $target := default 0 (index $budget "target") }}
-{{ $current := default 0 (index $budget "current") }}
-{{ $pct := 0.0 }}
-{{ if gt $target 0 }}{{ $pct = div (mul $current 100.0) $target }}{{ end }}
-{{ if gt $pct 100 }}{{ $pct = 100 }}{{ end }}
-{{ if gt $target 0 }}
-<div class="budget" aria-label="Budżet projektu {{ .Title }}">
-  <div class="budget__head">
-    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-    <strong>{{ printf "%.0f%%" $pct }}</strong>
-  </div>
-  <div class="budget__bar"><span style="width: {{ printf "%.1f" $pct }}%"></span></div>
-  <div class="budget__numbers">{{ lang.FormatNumber 0 $current }} zł / {{ lang.FormatNumber 0 $target }} zł</div>
-</div>
-{{ end }}
+{{ partial "budget-meter.html" (dict "budget" $budget "title" .Title "url" .RelPermalink) }}

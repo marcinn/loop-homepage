@@ -49,13 +49,16 @@
     <div class="support-copy">
       <p class="eyebrow">Przejrzyste wsparcie</p>
       <h2>Wspieraj wybrane projekty</h2>
-      <p>Darowizny celowe na konkretne projekty oraz wsparcie ogólne dla działalności LOOP.</p>
+      <p>Miesięczne budżety projektów oraz wsparcie ogólne dla działalności LOOP.</p>
       <div class="support-actions">
         <button class="button button--primary" type="button" data-donate-project="general" data-donate-label="LOOP">Wesprzyj LOOP</button>
         <a class="button button--outline" href="{{ "misja/" | relURL }}">Poznaj misję</a>
       </div>
     </div>
     <div class="budgets-grid">
+      {{ with index hugo.Data.budgets "general" }}
+        {{ partial "budget-meter.html" (dict "budget" . "title" "Budżet ogólny LOOP" "url" site.Home.RelPermalink) }}
+      {{ end }}
       {{ range (site.GetPage "section" "projects").Pages.ByWeight }}
         {{ $project := . }}
         {{ with .Params.budget_id }}

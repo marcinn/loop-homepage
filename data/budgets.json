@@ -1,18 +1,27 @@
 {
   "a800mon": {
-    "current": 3480,
-    "target": 8000
+    "current": 0,
+    "target": 200,
+    "scope": "monthly"
+  },
+  "general": {
+    "current": 0,
+    "target": 1000,
+    "scope": "monthly"
   },
   "godot-plugins": {
-    "current": 1780,
-    "target": 5000
+    "current": 0,
+    "target": 500,
+    "scope": "monthly"
   },
   "maszyna-reloaded": {
-    "current": 5230,
-    "target": 10000
+    "current": 300,
+    "target": 1000,
+    "scope": "monthly"
   },
   "simplegamesfactory": {
-    "current": 2950,
-    "target": 7000
+    "current": 0,
+    "target": 200,
+    "scope": "monthly"
   }
 }

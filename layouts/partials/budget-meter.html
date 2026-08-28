@@ -1,0 +1,17 @@
+{{ $budget := .budget }}
+{{ $target := default 0 (index $budget "target") }}
+{{ $current := default 0 (index $budget "current") }}
+{{ $scope := default "" (index $budget "scope") }}
+{{ $pct := 0.0 }}
+{{ if gt $target 0 }}{{ $pct = div (mul $current 100.0) $target }}{{ end }}
+{{ if gt $pct 100 }}{{ $pct = 100 }}{{ end }}
+{{ if gt $target 0 }}
+<div class="budget" aria-label="{{ if eq $scope "monthly" }}Miesięczny budżet{{ else }}Budżet{{ end }}: {{ .title }}">
+  <div class="budget__head">
+    <a href="{{ .url }}">{{ .title }}</a>
+    <strong>{{ printf "%.0f%%" $pct }}</strong>
+  </div>
+  <div class="budget__bar"><span style="width: {{ printf "%.1f" $pct }}%"></span></div>
+  <div class="budget__numbers">{{ lang.FormatNumber 0 $current }} zł / {{ lang.FormatNumber 0 $target }} zł{{ if eq $scope "monthly" }} w tym miesiącu{{ end }}</div>
+</div>
+{{ end }}
