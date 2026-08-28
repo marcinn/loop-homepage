@@ -1,0 +1,87 @@
+{{- $metaTitle := site.Title -}}
+{{- if not .IsHome -}}
+  {{- $metaTitle = printf "%s · LOOP" .Title -}}
+{{- end -}}
+
+{{- $metaDescription := site.Params.description -}}
+{{- with .Params.description -}}
+  {{- $metaDescription = . -}}
+{{- end -}}
+{{- with .Params.summary -}}
+  {{- $metaDescription = . -}}
+{{- end -}}
+
+{{- $imagePath := "img/social/loop-default.jpg" -}}
+{{- $imageAlt := "LOOP" -}}
+{{- if or .IsHome (and (eq .Kind "section") (eq .Section "projects")) -}}
+  {{- with site.GetPage "section" "projects" -}}
+    {{- $featuredProjects := where .Pages "Params.featured" true -}}
+    {{- if gt (len $featuredProjects) 0 -}}
+      {{- with index $featuredProjects.ByWeight 0 -}}
+        {{- $imagePath = .Params.image -}}
+        {{- $imageAlt = printf "%s — projekt LOOP" .Title -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- with .Params.image -}}
+  {{- $imagePath = . -}}
+  {{- $imageAlt = printf "%s — projekt LOOP" $.Title -}}
+{{- end -}}
+
+{{- $socialImage := "" -}}
+{{- $imageType := "" -}}
+{{- $imageWidth := 0 -}}
+{{- $imageHeight := 0 -}}
+{{- if $imagePath -}}
+  {{- if hasPrefix $imagePath "http" -}}
+    {{- $socialImage = $imagePath -}}
+  {{- else -}}
+    {{- with resources.Get $imagePath -}}
+      {{- $image := . | fingerprint -}}
+      {{- $socialImage = $image.Permalink -}}
+      {{- $imageType = $image.MediaType.Type -}}
+      {{- $imageWidth = $image.Width -}}
+      {{- $imageHeight = $image.Height -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- if not $socialImage -}}
+  {{- with resources.Get "img/social/loop-default.jpg" -}}
+    {{- $image := . | fingerprint -}}
+    {{- $socialImage = $image.Permalink -}}
+    {{- $imageType = $image.MediaType.Type -}}
+    {{- $imageWidth = $image.Width -}}
+    {{- $imageHeight = $image.Height -}}
+    {{- $imageAlt = "LOOP" -}}
+  {{- end -}}
+{{- end -}}
+
+<link rel="canonical" href="{{ .Permalink }}">
+<meta property="og:locale" content="pl_PL">
+<meta property="og:type" content="{{ if and .IsPage (eq .Section "blog") }}article{{ else }}website{{ end }}">
+<meta property="og:site_name" content="{{ site.Title }}">
+<meta property="og:title" content="{{ $metaTitle }}">
+<meta property="og:description" content="{{ $metaDescription }}">
+<meta property="og:url" content="{{ .Permalink }}">
+{{- with $socialImage }}
+<meta property="og:image" content="{{ . }}">
+<meta property="og:image:secure_url" content="{{ . }}">
+{{- end }}
+{{- with $imageType }}
+<meta property="og:image:type" content="{{ . }}">
+{{- end }}
+{{- if gt $imageWidth 0 }}
+<meta property="og:image:width" content="{{ $imageWidth }}">
+<meta property="og:image:height" content="{{ $imageHeight }}">
+{{- end }}
+{{- with $socialImage }}
+<meta property="og:image:alt" content="{{ $imageAlt }}">
+{{- end }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $metaTitle }}">
+<meta name="twitter:description" content="{{ $metaDescription }}">
+{{- with $socialImage }}
+<meta name="twitter:image" content="{{ . }}">
+<meta name="twitter:image:alt" content="{{ $imageAlt }}">
+{{- end }}
